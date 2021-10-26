@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Indie+Flower&family=Lato&family=Righteous&display=swap" rel="stylesheet">  
+<title>MARY ROBI JOSEPH</title>
+<script src="jquery-1.7.1.min.js"></script>
+<style>
+body {
+	margin:0px;
+}
+.item-1 {
+grid-area: menu;
+background-color: black;
+color: white;	
+padding: 20px;
+font-family: 'Lato', sans-serif;
+	}
+.item-1 a {
+ color: white;
+	}	
+.item-1 a:hover {
+	text-decoration:underline;
+	}	
+.item-2 {
+grid-area: main;
+padding: 20px;
+font-family: 'Lato', sans-serif;
+	}
+.item-2 a {
+	color: black;
+	}			
+.item-3 {
+font-family: 'Lato', sans-serif;
+grid-area: footer;
+display:none;
+color: white;
+	}	
+#container {
+	display: grid;
+	grid-template-areas:
+	'menu main main main main main';
+	height: 100vh;
+	}
+@media(max-width: 600px){
+.item-3 {
+grid-area: footer;
+display:block;
+	}	
+#container {
+	display: grid;
+	grid-template-areas:
+	'menu menu menu menu menu menu'
+	'footer footer footer footer footer footer';
+	}
+#quotes, #word, #person {
+	display:none;	
+	}
+.item-2 {
+	display: none;
+}	
+body {
+	margin:0px;
+	background-color:black;
+}
+#fmobile {
+	display: block;
+	}
+}
+a {
+	text-decoration:none;
+	color: white;
+}
+a:hover {
+	text-decoration:underline;
+}
+#quotes {
+width: 200px;
+font-family: 'Indie Flower', cursive;
+	}
+#word, #person {
+	
+	padding-left: 30px;
+	}	
+#word {
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+.spacer {
+	padding-top:50px;
+}
+hr {
+border-top: 1px dotted white;
+}
+#fmobile {
+	display:block;
+	}
+.porto {
+	display: flex;
+	flex-wrap: wrap;
+	}	
+.porto > div {
+	padding: 15px;
+	margin: 10px;
+	width: 200px;
+	height: 200px;
+	border: thin solid grey;
+	border-radius: 25px;
+	font-size: 24px;
+	text-align:center;
+	/* font-family: 'Righteous', cursive; */
+	font-family: 'Fredericka the Great', cursive;
+	}
+.porto > div:hover:nth-child(odd) {
+	background-color: black;
+	color:white;
+	animation: star 4s linear infinite;
+}	
+.porto > div:hover:nth-child(even) {
+	background-color: black;
+	color:white;
+	animation: star1 4s linear infinite;
+}
+@keyframes star {
+    0%   {transform: rotate(0deg);}
+    25% {transform: rotate(5deg);}
+    50%   {transform: rotate(0deg);}
+    100% {transform: rotate(-5deg);}	
+}
+@keyframes star1 {
+    0%   {transform: rotate(0deg);}
+    25% {transform: rotate(-5deg);}
+    50%   {transform: rotate(0deg);}
+    100% {transform: rotate(5deg);}	
+}
+.porto > div:hover a {
+	color:white;
+	}	
+.para {
+	padding-left: 30px;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+<!--Header -->
+<div class="item-1">
+<h2>Mary Robi Joseph</h2>
+<h3>Web Developer</h3>
+<h3>Contacts</h3>
+<p style="font-size: 12px; text-align:center;">(Click Below)</p>
+<ul style="list-style-type:square">
+<li><a href="https://www.linkedin.com/in/mary-robi-joseph/" target="_blank">Linkedin</a></li>
+<li><a href="mailto:maryrobicodes@gmail.com" target="_blank">Email</a></li>
+<li><a href="tel:+254729050500" target="_blank">Telephone</a></li>
+<li><a href="mary-robi-web.pdf" target="_blank">CV</a></li>
+</ul>
+
+<div class="spacer"></div>
+<hr />
+<div id="quotes">
+<div id="word">Word</div>
+<div id="person">Person</div>
+</div>
+<hr />
+
+</div>
+
+<!--Footer -->
+<div class="item-3">
+<!--List of projects -->
+<div id="fmobile">
+<h4 class="para">PROJECTS DONE</h4>
+<p class="para">Click on any one below to visit</p>
+<ol id="doneprojects"></ol>
+</div>
+</div>
+
+<!--Porto start  -->
+<div class="item-2">
+<div id="thetitle">
+<h2 style="text-align:center;">PROJECTS COMPLETED</h2>
+<p style="text-align:center;">Click on any one below to visit</p>
+</div>
+ <div class="porto">
+
+
+</div> 
+
+</div>
+<!--Porto end -->
+
+</div>
+
+<script>
+
+// project part
+const projects = [
+{
+	project:"SILICON CONSULTING LIMITED NEWSLETTER",
+	plink:"https://media-exp1.licdn.com/dms/image/C5622AQGvbYHVG5ksVg/feedshare-shrink_1280/0/1628494708517?e=1637193600&v=beta&t=xG7b9r9dJHg-kmqx7U3pnOE89vs47oKeiu_VfsYroXI"
+	},
+{
+	project:"VISIT KISUMU WEBSITE",
+	plink:"https://visitkisumu.co.ke/"
+	},	
+{
+	project:"KISUMU FRESH FRUITS WEBSITE",
+	plink:"https://kisumufreshfruits.co.ke/"
+	},
+{
+	project:"RICOH CLEANING SERVICES WEBSITE",
+	plink:"https://maryrobicodes.github.io/ricohcleaningservices/"
+	},
+{
+	project:"AUTOMATED POWER OF ATTORNEY GENERATOR",
+	plink:"https://maryrobijoseph.000webhostapp.com/poa/index.html"
+	},
+{
+	project:"SAHARA KING LIMITED WEBSITE",
+	plink:"http://saharakingltd.com/"
+	},
+{
+	project:"DAWOO CONSTRUCTION AND SUPPLIES LIMITED WEBSITE",
+	plink:"https://maryrobicodes.github.io/daawoholdings/"
+	},
+{
+	project:"MEDICAL TESTING SERVICES WEBSITE",
+	plink:"https://maryrobicodes.github.io/medicaltestingservices/"
+	},
+{
+	project:"VIK MEDIA WEBSITE",
+	plink:"https://media-exp1.licdn.com/dms/image/C5622AQGyCbT_YxUuTg/feedshare-shrink_2048_1536/0/1627886609079?e=1637193600&v=beta&t=J4jlRsBZgi_s5SpIvqdkBR33vi9IjENUCs1Hm99YLRs"
+	},
+{
+	project:"SILICON CONSULTING LIMITED WEBSITE",
+	plink:"https://siliconconsultingltd.com/"
+	},
+{
+	project:"BIBLE ANIMATION STORIES CHANNEL",
+	plink:"https://www.youtube.com/channel/UCI4X3dJaE-SgOu_Mlrs-okQ"
+	},
+{
+	project:"FEMININE QUIZ GAME",
+	plink:"https://maryrobicodes.github.io/femininequizgame/"
+	},
+{
+	project:"BIBLE COMMANDS QUIZ GAME",
+	plink:"https://maryrobicodes.github.io/Simple-Commandments-Game/"
+	},
+{
+	project:"SITE UNDER CONSTRUCTION PAGE",
+	plink:"https://maryrobicodes.github.io/viktu-under-construction/"
+	},
+{
+	project:"BIBLE VERSE GAME",
+	plink:"https://maryrobicodes.github.io/VERSE-DASH/"
+	},
+{
+	project:"FANISI HOUSING WEBSITE",
+	plink:"https://maryrobicodes.github.io/fanisihousing/"
+	}	
+];
+
+// portofolio part
+for(a=0; a<projects.length; a++) {
+var works = document.createElement("div");
+works.innerHTML = "<a href='" + projects[a].plink + "' target='_blank'>" + projects[a].project + "</a>";
+document.getElementsByClassName("porto")[0].appendChild(works);
+};
+
+// Mobile Section
+thismobile();
+
+function thismobile() {
+for (var i=0; i<projects.length; i++) {
+ document.getElementById("doneprojects").innerHTML += "<li><a href='" + projects[i].plink + "' target='_blank'>" + projects[i].project + "</a></li>";
+};
+};
+
+
+// quote part
+const quotes = [
+{
+	saying: "Adventure is worthwhile in itself",
+	person: "Amelia Earhart"
+	},
+{
+	saying: "All good things are wild and free",
+	person: "Henry David Thoreau"
+	},	
+{
+	saying: "Blessed are the curious for they shall have adventures",
+	person: "Lovelle Drahman"
+	},	
+{
+	saying: "Never do things others can do and will do if there are things others cannot do or will not do",
+	person: "Amelia Earhart"
+	},
+{
+	saying: "Make everything an adventure. Otherwise, it will suck",
+	person: "Nita Morgan"
+	}		
+];
+
+window.setInterval(getquotes, 30000);
+getquotes();
+
+function getquotes(){
+var x;
+x = randomno();
+$("#quotes").fadeTo(2000,1)
+$("#quotes").fadeTo(26000,1);
+document.getElementById("word").textContent = quotes[x].saying;
+document.getElementById("person").textContent = "- " + quotes[x].person;
+$("#quotes").fadeTo(2000,0);
+};
+
+
+function randomno(){
+return Math.floor(Math.random() * quotes.length);	
+	}
+
+
+</script>
+</body>
+</html>
